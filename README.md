@@ -57,6 +57,7 @@ La expresión regular `\bIMPORTANTE\b.*` reconoce la palabra `IMPORTANTE` y el t
 ## RESULTADOS
 <img width="1225" height="790" alt="image" src="https://github.com/user-attachments/assets/f4a231b3-6ec5-4f31-bb42-e425cdde9ee6" />
 
-<img width="1147" height="799" alt="image" src="https://github.com/user-attachments/assets/9bbf3472-17bc-46d4-8d33-13fa373a5f06" />
+<img width="1175" height="779" alt="image" src="https://github.com/user-attachments/assets/2b33fe21-ac4f-4183-a465-78a141b70a38" />
+
 
 
