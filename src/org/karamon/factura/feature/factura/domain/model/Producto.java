@@ -4,10 +4,15 @@ public class Producto {
     private Integer codigo;
     private String nombre;
     private Double precio;
+    private static int ultimoCodigo;
 
     //Constructor
 
-   //Getter y setter
+    public Producto() {
+        this.codigo = ++ultimoCodigo;
+    }
+
+    //Getter y setter
     public Integer getCodigo() {
         return codigo;
     }
