@@ -24,11 +24,11 @@ Aplicación para gestionar facturas de compras
   ```regex
   \bIMPORTANTE\b.*
 
-Sustituye `IMPORTANTE` por la palabra que quieras reconocer y asígnale el color que prefieras.
+**NOTA: Cambia** `IMPORTANTE` por la palabra que quieras reconocer y asígnale el color que prefieras.
 
 Por ejemplo, en mi caso he elegido el color rojo porque representa algo importante para mí. De esta manera, podré identificar rápidamente estos comentarios cuando revise mi código.
 
-- 6. A continuación, os dejaré algunas capturas de pantalla con los pasos que debéis seguir y algunos ejemplos de los resultados obtenidos.
+- **6.** A continuación, os dejaré algunas capturas de pantalla con los pasos que debéis seguir y algunos ejemplos de los resultados obtenidos.
 
 ---
 
