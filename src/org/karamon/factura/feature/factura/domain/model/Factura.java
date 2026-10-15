@@ -70,54 +70,51 @@ public class Factura {
         return total;
     }
 
-    public String verDetalle() {
-        /**
-         * IMPORTANTE: La pregunta del millón: ¿por qué usas StringBuilder?
-         * NOTA: Uso StringBuilder porque estoy concatenando muchos datos.
-         * REVISAR: Mantener código limpio y legible.
-         * PENDIENTE: Subirlo a git.
-         */
-        StringBuilder sb = new StringBuilder("Factura Nº: ");
-        // IMPORTANTE: Validar los valores nulos y las cadenas en blanco.
-        sb.append(idFactura).append("\nCliente: ");
-        if (this.cliente.getNombre() != null && this.cliente.getNombre().isBlank()
-                && this.cliente.getEmail() != null && this.cliente.getEmail().isBlank()
-                && this.cliente.getTelefono() != null && this.cliente.getTelefono().isBlank()
-                && this.cliente.getNumIdentificacion() != null && this.cliente.getNumIdentificacion().isBlank()
-                && this.descripcion != null && this.descripcion.isBlank()) {
-            sb.append(this.cliente.getNombre())
-                    .append("\nTeléfono: ")
-                    .append(this.cliente.getTelefono())
-                    .append("\nCorreo: ")
-                    .append(this.cliente.getEmail())
-                    .append("\nDNI/NIE/NIF: ")
-                    .append(this.cliente.getNumIdentificacion())
-                    .append("\nDescripción: ")
-                    .append(this.descripcion)
-                    .append("\n") // IMPORTANTE: Añadir un salto de línea.
-                    .append("\n#\tNombre\t$\tCant.\tTotal\n"); // NOTA: Estoy formateando la tabla.
-            // PENDIENTE: Formatear la fecha de la factura.
-            SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM, yyyy");
-            sb.append("Fecha de emisión: ").append(df.format(this.fecha)).append("\n");
 
-            // REVISAR: Valorar la posibilidad de iterar con forEach.
-            for (ItemFactura item : this.itmes) {
-                // IMPORTANTE: Comprobar que el elemento (item/línea) no sea nulo.
-                if (item == null) {
-                    continue;
-                }
-                sb.append(item.getProducto().getCodigo())
-                        .append("\t")
-                        .append(item.getProducto().getNombre())
-                        .append("\t")
-                        .append(item.getProducto().getPrecio())
-                        .append("\t")
-                        .append(item.getCandidad())
-                        .append("\t")
-                        .append(item.calcularImporte()).append("\n");
+    /**
+     * IMPORTANTE: La pregunta del millón: ¿por qué usas StringBuilder?
+     * NOTA: Uso StringBuilder porque estoy concatenando muchos datos.
+     * REVISAR: Mantener código limpio y legible.
+     * PENDIENTE: Subirlo a git.
+     */
+    // IMPORTANTE: Validar los valores nulos y las cadenas en blanco.
+    public String verDetalle() {
+        StringBuilder sb = new StringBuilder("Factura Nº: ");
+
+        sb.append(idFactura)
+                .append("\nCliente: ")
+                .append(cliente.getNombre() != null ? cliente.getNombre() : "Sin nombre")
+                .append("\nTeléfono: ")
+                .append(cliente.getTelefono() != null ? cliente.getTelefono() : "Sin teléfono")
+                .append("\nCorreo: ")
+                .append(cliente.getEmail() != null ? cliente.getEmail() : "Sin correo")
+                .append("\nDNI/NIE/NIF: ")
+                .append(cliente.getNumIdentificacion() != null
+                        ? cliente.getNumIdentificacion() : "Sin identificación")
+                .append("\n=============== Detalle de la factura ===============: ")
+                .append(descripcion != null ? descripcion : "Sin descripción");
+        //Revisar: Formatear la fecha de emisión de la factura
+        SimpleDateFormat df = new SimpleDateFormat("dd 'de' MMMM, yyyy");
+        sb.append("\nFecha de emisión: ")
+                .append(df.format(fecha))
+                .append("\n\n#\tNombre\tPrecio\tCant.\tTotal\n");
+        for (ItemFactura item : itmes) {
+            //Importante: validar si el item es nulo, para evitar el problemas
+            if (item == null) {
+                continue;
             }
-            sb.append("\nGran Total: ").append(calcularTotal());
+            sb.append(item.getProducto().getCodigo())
+                    .append("\t")
+                    .append(item.getProducto().getNombre())
+                    .append("\t")
+                    .append(item.getProducto().getPrecio())
+                    .append("\t")
+                    .append(item.getCantidad())
+                    .append("\t")
+                    .append(item.calcularImporte())
+                    .append("\n");
         }
+        sb.append("\nGran Total: ").append(calcularTotal());
         return sb.toString();
     }
 }

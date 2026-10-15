@@ -1,24 +1,24 @@
 package org.karamon.factura.feature.factura.domain.model;
 
 public class ItemFactura {
-    private Integer candidad;
+    private Integer cantidad;
     //Atributo de asociación
     private Producto producto;
     //Constructor
 
-    public ItemFactura(Integer candidad, Producto producto) {
-        this.candidad = candidad;
+    public ItemFactura(Integer cantidad, Producto producto) {
+        this.cantidad = cantidad;
         this.producto = producto;
     }
 
     //Getter y Setter
 
-    public Integer getCandidad() {
-        return candidad;
+    public Integer getCantidad() {
+        return cantidad;
     }
 
-    public void setCandidad(Integer candidad) {
-        this.candidad = candidad;
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
 
     public Producto getProducto() {
@@ -30,6 +30,6 @@ public class ItemFactura {
     }
     //Calcular Importe
     public Double calcularImporte(){
-        return this.candidad * this.producto.getPrecio();
+        return this.cantidad * this.producto.getPrecio();
     }
 }

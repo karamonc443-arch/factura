@@ -4,7 +4,7 @@ public class Producto {
     private Integer codigo;
     private String nombre;
     private Double precio;
-    private static int ultimoCodigo;
+    private static int ultimoCodigo = 0;
 
     //Constructor
 
