@@ -49,5 +49,14 @@ La expresión regular `\bIMPORTANTE\b.*` reconoce la palabra `IMPORTANTE` y el t
 - `\b` indica un límite de palabra.
 - `.*` permite reconocer el resto del texto de esa línea.
 
-¡Personaliza tus comentarios y dale más color a tu código! 🚀
+##¡Personaliza tus comentarios y dale más color a tu código! 🚀
+---
+## EJEMPLOS
+<img width="1233" height="873" alt="image" src="https://github.com/user-attachments/assets/c81b7f24-af89-4fd4-918f-93eace06ccfa" />
+
+## RESULTADOS
+<img width="1225" height="790" alt="image" src="https://github.com/user-attachments/assets/f4a231b3-6ec5-4f31-bb42-e425cdde9ee6" />
+
+<img width="1147" height="799" alt="image" src="https://github.com/user-attachments/assets/9bbf3472-17bc-46d4-8d33-13fa373a5f06" />
+
 
