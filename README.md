@@ -29,7 +29,9 @@ Sustituye `IMPORTANTE` por la palabra que quieras reconocer y asígnale el color
 Por ejemplo, en mi caso he elegido el color rojo porque representa algo importante para mí. De esta manera, podré identificar rápidamente estos comentarios cuando revise mi código.
 
 - 6. A continuación, os dejaré algunas capturas de pantalla con los pasos que debéis seguir y algunos ejemplos de los resultados obtenidos.
+
 ---
+
 ### 💡 Algunos ejemplos de patrones
 
 | Etiqueta | Expresión regular | Color sugerido |
@@ -38,6 +40,7 @@ Por ejemplo, en mi caso he elegido el color rojo porque representa algo importan
 | `IMPORTANTE` | `\bIMPORTANTE\b.*` | Rojo |
 | `NOTA` | `\bNOTA\b.*` | Verde |
 | `REVISAR` | `\bREVISAR\b.*` | Turquesa |
+
 
 ---
 
@@ -49,13 +52,17 @@ La expresión regular `\bIMPORTANTE\b.*` reconoce la palabra `IMPORTANTE` y el t
 - `.*` permite reconocer el resto del texto de esa línea.
 
 ¡Personaliza tus comentarios y dale más color a tu código! 🚀
+
 ---
+
 ## EJEMPLOS
 <img width="1233" height="873" alt="image" src="https://github.com/user-attachments/assets/c81b7f24-af89-4fd4-918f-93eace06ccfa" />
 ---
 ## RESULTADOS
 <img width="1225" height="790" alt="image" src="https://github.com/user-attachments/assets/f4a231b3-6ec5-4f31-bb42-e425cdde9ee6" />
+
 ---
+
 <img width="1175" height="779" alt="image" src="https://github.com/user-attachments/assets/2b33fe21-ac4f-4183-a465-78a141b70a38" />
 
 
